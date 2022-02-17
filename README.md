@@ -9,65 +9,76 @@ Google Colab Notebook, Pyspark 3.0.3, Amazon AWS RDS-Postgresql
 
 ## Results: 
 #### Perform ETL on Amazon Product Reviews
-The coding for the ETL as well aa analysis can be found on [Amazon_Reviews_ETL.ipynb]()
+The coding for the ETL as well as analysis can be found on [Amazon_Reviews_ETL.ipynb](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/Amazon_Reviews_ETL.ipynb) and the schema for the sql tables can be found in [challenge_schema.sql](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/challenge_schema.sql)
+
 * Install spark and Java and start a Spark session
-![install_spark](?raw=True)
+![install_spark](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/install_spark.png?raw=True)
 
 * Download postgres driver
-![postgres](?raw=True)
+![postgres](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/postgres.png?raw=True)
 
 * Start an app session and create app name
-![app_name](?raw=True)
+![app_name](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/app_name.png?raw=True)
 
 * Load amazon data into Spark Data frame.
-![load_data](?raw=True)
+![load_data](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/load_data.png?raw=True)
 
 * Clean the data
-![clean_df](?raw=True)
+![clean_df](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/clean_df.png?raw=True)
 
 * Create cutomers_df Dataframe.
-![cutomers_df](?raw=True)
+![cutomers_df](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/customers_df.png?raw=True)
 
 
 * Create products_df Dataframe.
-![products_df](?raw=True)
+![products_df](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/products_df.png?raw=True)
 
 
 * Create review_id_df Dataframe.
-![review_id_df](?raw=True)
+![review_id_df](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/review_id_df.png?raw=True)
 
 
 * Create vine_df Dataframe.
-![vine_df](?raw=True)
+![vine_df](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/vine_df.png?raw=True)
 
 * All four DataFrames are loaded into their respective tables in pgAdmin.
-![aws_rds](?raw=True)
+![aws_rds](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/aws_rds.png?raw=True)
+
+* The data in the tables can be viewed using select query 
+
+![customers_table](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/customers_table.png?raw=True)
+
+![products_table](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/products_table.png?raw=True)
+
+![review_id_table](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/review_id_table.png?raw=True)
+
+![vine_table](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/vine_table.png?raw=True)
 
 #### Determine Bias of Vine Reviews
- The coding for vine_df analysis to determine bias can be found in [Vine_Review_Analysis]()
+ The coding for vine_df analysis to determine bias can be found in [Vine_Review_Analysis](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/Vine_Review_Analysis.ipynb)
 * Recreate the vine_df from Amazon_Reviews_ETL
-![vine_df](?raw=True)
+![vine_df](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/vine_df.png?raw=True)
 * The data is filtered to create a total_votes_df DataFrame where there are 20 or more total votes
-![total_votes_df](?raw=True)
+![total_votes_df](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/total_votes_df.png?raw=True)
 
 * The data is filtered to create a helpful_votes_df DataFrame where percentage of helpful_votes is equal to or greater than 50%
 
-![helpful_votes_df](?raw=True)
+![helpful_votes_df](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/helpful_votes_df.png?raw=True)
 
-* The data is filtered to create a paid_df DataFrame  where there is a Vine review(Vine == 'Y')
-![paid_df](?raw=True)
+* The data is filtered to create a paid_df DataFrame  where there is a Vine review(vine == 'Y')
+![paid_df](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/paid_df.png?raw=True)
 
-* The data is filtered to create an unpaid_df DataFrame  where there isn't a Vine review or unpaid review(Vine == 'N')
+* The data is filtered to create an unpaid_df DataFrame  where there isn't a Vine review or unpaid review(vine == 'N')
 
-![unpaid](?raw=True)
+![unpaid](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/unpaid_df.png?raw=True)
 
 * The total number of reviews, the number of 5-star reviews, and the percentage 5-star reviews are calculated for all Vine reviews.
 
-![vine](?raw=True)
+![vine](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/vine.png?raw=True)
 
 * The total number of reviews, the number of 5-star reviews, and the percentage 5-star reviews are calculated for all non-Vine reviews.
 
-![non_vine](?raw=True)
+![non_vine](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/non_vine.png?raw=True)
 
 
 ## Summary: 
@@ -78,6 +89,6 @@ but for non-Vine or unpaid reviews, number of 5-star reviews is 25220. So, the p
 
 So, there doesn't seem to be a positive bias for reviews made by Vine members for this particular product. In fact, in seems like the paid reviewers take their job quiet seriously and review the product critically. As can be seen below by the ratio of 5-star review to non 5-star review for both Vine and non-Vine members.
 
-![additonal](?raw=True)
+![additonal](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/additional.png?raw=True)
 
 We also need to keep in mind out of the thousands of products available to review only Camera related products have been reviewed in this case and unless many more random products are analysed in the similar manner and similar results are achieved we cannot ensure that a positive bias truly doesn't exists.
