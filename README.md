@@ -9,7 +9,7 @@ Google Colab Notebook, Pyspark 3.0.3, Amazon AWS RDS-Postgresql
 
 ## Results: 
 #### Perform ETL on Amazon Product Reviews
-The coding for the ETL as well as analysis can be found on [Amazon_Reviews_ETL.ipynb](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/Amazon_Reviews_ETL.ipynb) and the schema for the sql tables can be found in [challenge_schema.sql](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/challenge_schema.sql)
+The coding for the ETL as well as analysis can be found on [Amazon_Reviews_ETL.ipynb](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/Amazon_Reviews_ETL.ipynb) and the schema for the sql tables can be found in [challenge_schema.sql](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/challenge_schema.sql) the dataset on which the analysis has been performed can be found in [index.txt](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/2a401515aedface53d9733add2965affbcd90471/index.txt) as https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Camera_v1_00.tsv.gz
 
 * Install spark and Java and start a Spark session
 ![install_spark](https://github.com/sucharita1/Amazon_Vine_Analysis/blob/657278ba77419eb2549cc3fda5318dc77cc4583c/images/install_spark.png?raw=True)
